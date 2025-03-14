@@ -59,3 +59,17 @@ VoIP ルータに対して MikoPBX / Asterisk を曝露したいとき、ホス�
 <img src="/docs/network-port-2.png" width="400px" />
 
 から意図を理解することができます。
+
+## 免責事項
+
+このリポジトリは [東京広域電話網](https://tkytel.github.io/) とは何ら関係がありません。
+
+## 関連項目
+
+- [Org: 東京広域電話網 (tkytel)](https://github.com/tkytel)
+- [Web: 東京広域電話網](https://tkytel.github.io/)
+- [Zenn: いまさら電話網](https://zenn.dev/kusaremkn/articles/abd760f9f2f450)
+
+## コメント
+
+これを機に、私とも相互接続してくださると嬉しいです。
