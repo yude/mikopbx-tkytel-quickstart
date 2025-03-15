@@ -31,15 +31,15 @@ TS_AUTH_KEY=TS-AUTH-YOUR_TS_AUTH_KEY
 
 Web コンソールから、[通常のステップ](https://zenn.dev/kusaremkn/articles/abd760f9f2f450) 通りの設定を済ませてください。
 
-## ホストに曝露するポートについて
+## ホストに紐づけるポートについて
 
-VoIP ルータに対して MikoPBX / Asterisk を曝露したいとき、ホストコンピュータ側でポートフォワーディングしたい需要があります。
+VoIP ルータへ MikoPBX / Asterisk を接続したいとき、LAN 端子を増やし、ホストコンピュータ側でポートフォワーディングしたい需要があります。
 
 私の環境 & このリポジトリの `compose.yaml` では、以下のような形です。
 
 <img src="/docs/network-example.png" width="400px" />
 
-デフォルトでは以下のように曝露する設定です。
+デフォルトでは以下のように紐づける設定です。
 
 ```yaml
     ports:
