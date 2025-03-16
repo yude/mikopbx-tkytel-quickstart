@@ -20,7 +20,10 @@ services:
 
   mikopbx:
     container_name: "mikopbx"
-    image: "ghcr.io/mikopbx/mikopbx-x86-64"
+    build:
+      context: .
+      dockerfile: Dockerfile.mikopbx
+    image: "ghcr.io/m-tsuru/mikopbx-tkytel-quickstart"
     network_mode: "container:tailscale-pbx"
     cap_add:
       - NET_ADMIN

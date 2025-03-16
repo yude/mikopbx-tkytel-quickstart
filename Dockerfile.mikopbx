@@ -1,0 +1,11 @@
+FROM ghcr.io/mikopbx/mikopbx-x86-64 AS runner
+
+# Install full-featured Japanese voice
+WORKDIR /work
+RUN curl -o asterisk-core-sounds-ja-gsm-current.tar.gz https://downloads.asterisk.org/pub/telephony/sounds/asterisk-core-sounds-ja-gsm-current.tar.gz
+WORKDIR /work/ja-jp
+RUN tar xf ../asterisk-core-sounds-ja-gsm-current.tar.gz
+WORKDIR /work
+RUN rm -rf /offload/asterisk/sounds/ja-jp
+RUN mv -f /work/ja-jp /offload/asterisk/sounds/
+RUN rm -rf /work/asterisk-core-sounds-ja-gsm-current.tar.gz
