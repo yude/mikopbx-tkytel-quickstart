@@ -27,6 +27,7 @@ TS_AUTH_KEY=TS-AUTH-YOUR_TS_AUTH_KEY
 3. Docker コンテナを起動します。
 
 ```bash
+$ docker compose build
 $ docker compose up -d
 ```
 
