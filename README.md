@@ -13,19 +13,22 @@
 
 - [いまさら VoIP 網](https://zenn.dev/kusaremkn/articles/abd760f9f2f450) で動作させられる人
 
-## Tailscale 側の設定
+## Docker
 
-1. Get Auth Keys from [https://login.tailscale.com/admin/settings/keys](https://login.tailscale.com/admin/settings/keys).
-    - Enable "Reusable"
-    - Enable "Tag"
+1. Tailscale の Auth key を [Admin console](https://login.tailscale.com/admin/settings/keys) から取得します。
+    - Reusable と Tag を許可する。
 
-2. Set environmental Keys to `.env`.
+2. `.env` で環境変数を設定します。
 
 ```ini
 TS_AUTH_KEY=TS-AUTH-YOUR_TS_AUTH_KEY
 ```
 
-3. Access `:3000`
+3. Docker コンテナを起動します。
+
+```bash
+$ docker compose up -d
+```
 
 ## MikoPBX
 
