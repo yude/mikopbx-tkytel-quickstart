@@ -32,16 +32,16 @@
 
 1. `.env` という名前のテキスト ファイルを作成し、環境変数を設定します。
 
-```ini
-TS_AUTH_KEY=TS-AUTH-YOUR_TS_AUTH_KEY
-```
+    ```ini
+    TS_AUTH_KEY=TS-AUTH-YOUR_TS_AUTH_KEY
+    ```
 
-3. Docker コンテナを起動します。
-
-```bash
-$ docker compose build # 初回のみ
-$ docker compose up -d
-```
+1. Docker コンテナを起動します。
+    
+    ```bash
+    $ docker compose build # 初回のみ
+    $ docker compose up -d
+    ```
 
 ## MikoPBX
 
