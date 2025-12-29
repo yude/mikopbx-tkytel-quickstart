@@ -10,8 +10,8 @@ services:
       - "10000-10800:10000-10800/udp"
     hostname: miko # Your favorite Host Name
     privileged: true
+    env_file: .env
     environment:
-    - TS_AUTHKEY=$TS_AUTHKEY
     - TS_STATE_DIR=/var/lib/tailscale
     - TS_USERSPACE=false
     cap_add:
