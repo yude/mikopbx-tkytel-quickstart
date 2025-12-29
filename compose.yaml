@@ -3,7 +3,7 @@ services:
     container_name: tailscale-pbx
     image: tailscale/tailscale:latest
     ports:
-      - "3000:3000"
+      - "8443:8443"
       - "5060:5060/tcp"
       - "5060:5060/udp"
       - "5061:5061/tcp"
@@ -40,9 +40,9 @@ services:
       # Change the default SSH port to 23
       - SSH_PORT=23
       # Change the default WEB port to 8080
-      - WEB_PORT=3000
+      - WEB_PORT=8080
       # Change the default WEB HTTPS port to 8443
-      # - WEB_HTTPS_PORT=8443
+      - WEB_HTTPS_PORT=8443
       # MikoPBX Admin Console Password
       - WEB_ADMIN_PASSWORD=$MIKOPBX_ADMIN_PASSWORD
     depends_on:
