@@ -15,10 +15,22 @@
 
 ## Docker
 
+1. MikoPBX 向けディレクトリを用意します。ここでは現在のユーザのホーム ディレクトリ配下に作成します。
+    ```shell
+    $ mkdir pbx && cd pbx
+    ```
+
+1. Docker Compose マニフェストファイルをダウンロードします。
+    ```shell
+    $ wget https://raw.githubusercontent.com/m-tsuru/mikopbx-tkytel-quickstart/refs/heads/main/compose.yaml
+    # または
+    $ curl --remote-name https://raw.githubusercontent.com/m-tsuru/mikopbx-tkytel-quickstart/refs/heads/main/compose.yaml
+    ```
+
 1. Tailscale の Auth key を [Admin console](https://login.tailscale.com/admin/settings/keys) から取得します。
     - Reusable と Tag を許可する。
 
-2. `.env` で環境変数を設定します。
+1. `.env` という名前のテキスト ファイルを作成し、環境変数を設定します。
 
 ```ini
 TS_AUTH_KEY=TS-AUTH-YOUR_TS_AUTH_KEY
@@ -27,7 +39,7 @@ TS_AUTH_KEY=TS-AUTH-YOUR_TS_AUTH_KEY
 3. Docker コンテナを起動します。
 
 ```bash
-$ docker compose build
+$ docker compose build # 初回のみ
 $ docker compose up -d
 ```
 

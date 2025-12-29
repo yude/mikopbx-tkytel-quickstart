@@ -21,7 +21,7 @@ services:
   mikopbx:
     container_name: "mikopbx"
     build:
-      context: .
+      context: https://github.com/m-tsuru/mikopbx-tkytel-quickstart.git#main
       dockerfile: Dockerfile.mikopbx
     image: "ghcr.io/m-tsuru/mikopbx-tkytel-quickstart"
     network_mode: "container:tailscale-pbx"
